@@ -1,27 +1,31 @@
 <script setup>
 // import HelloWorld from './components/HelloWorld.vue'
+import Aside from './components/Framework/Aside.vue'
 </script>
 
 <template>
   <div class="common-layout">
     <el-container>
-      <el-header>Header</el-header>
-    </el-container>
-    <el-container>
-      <el-aside width="200px">Aside</el-aside>
-      <el-main>
-        <router-view></router-view>
-      </el-main>
+      <el-aside width="200px">
+        <Aside></Aside>
+      </el-aside>
+      <el-container>
+        <el-header class="header"></el-header>
+        <el-main>
+          <router-view></router-view>
+        </el-main>
+      </el-container>
     </el-container>
   </div>
   <!-- <HelloWorld msg="Vite + Vue" /> -->
 </template>
 
 <style scoped>
-*{
+* {
   margin: 0;
   padding: 0;
 }
+
 /* .logo {
   height: 6em;
   padding: 1.5em;
@@ -36,4 +40,8 @@
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
+.header{
+        border-bottom: 1px solid gray;
+        background: #409EFF;
+    }
 </style>
