@@ -3,7 +3,7 @@
         <label :key="menu.index" v-for="menu in data">
             <el-sub-menu :index="String(menu.id)" :route="menu.url" v-if="menu.children">
                 <template #title>
-                     <el-icon><location /></el-icon>
+                     <el-icon><Grid /></el-icon>
                     <span>{{menu.name}}</span>
                 </template>
                 <label>
@@ -11,7 +11,7 @@
                 </label>
             </el-sub-menu>
             <el-menu-item :index="String(menu.id)" :route="menu.url" v-else>
-                <el-icon><location /></el-icon>
+                <el-icon><MagicStick /></el-icon>
                 <span slot="title" ref="ent">
                         {{menu.name}}
                     </span>
