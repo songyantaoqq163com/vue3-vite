@@ -16,9 +16,9 @@
       </el-sub-menu>
       <el-menu-item :index="String(menu.id)" :route="menu.url" v-else>
         <el-icon><MagicStick /></el-icon>
-        <span slot="title" ref="ent">
+        <template #title>
           {{ menu.name }}
-        </span>
+        </template>
       </el-menu-item>
     </label>
   </div>
