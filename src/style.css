@@ -2,3 +2,6 @@
   height: 35px !important;
   line-height: 35px !important;
 }
+ul li{
+  list-style: none
+}
