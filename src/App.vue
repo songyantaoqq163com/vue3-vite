@@ -1,6 +1,6 @@
 <script setup>
 // import HelloWorld from './components/HelloWorld.vue'
-import Aside from './components/Framework/Aside.vue'
+import Aside from "./components/Framework/Aside.vue";
 </script>
 
 <template>
@@ -10,7 +10,7 @@ import Aside from './components/Framework/Aside.vue'
         <Aside></Aside>
       </el-aside>
       <el-container>
-        <el-header class="header"></el-header>
+        <el-header></el-header>
         <el-main>
           <router-view></router-view>
         </el-main>
@@ -20,18 +20,11 @@ import Aside from './components/Framework/Aside.vue'
   <!-- <HelloWorld msg="Vite + Vue" /> -->
 </template>
 
-<style scoped>
-* {
+<style>
+body {
   margin: 0;
   padding: 0;
 }
-
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-} */
 
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -40,8 +33,12 @@ import Aside from './components/Framework/Aside.vue'
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
-.header{
-        border-bottom: 1px solid gray;
-        background: #409EFF;
-    }
+.el-header {
+  border-bottom: 1px solid gray;
+  background: #409eff;
+  height: 40px!important;
+}
+.el-main {
+  --el-main-padding: 10px!important;
+}
 </style>

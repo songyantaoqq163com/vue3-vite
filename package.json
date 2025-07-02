@@ -10,13 +10,16 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.1.0",
+    "@vue/runtime-core": "^3.5.17",
     "element-plus": "^2.3.6",
+    "path": "^0.12.7",
     "router": "^1.3.8",
-    "vue": "^3.2.47",
-    "vue-router": "^4.2.2"
+    "vue": "^3.5.17",
+    "vue-router": "^4.2.2",
+    "vxe-table": "^4.13.51"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.1.0",
-    "vite": "^4.3.9"
+    "@vitejs/plugin-vue": "^4.6.2",
+    "vite": "^4.5.14"
   }
 }
