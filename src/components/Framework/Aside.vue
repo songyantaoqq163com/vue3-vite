@@ -6,6 +6,7 @@
         <el-menu
           default-active="1-1"
           class="menu_left"
+          unique-opened=true
           router
           @open="handleOpen"
           @close="handleClose"

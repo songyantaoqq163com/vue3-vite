@@ -81,6 +81,15 @@
         </ol>
       </div>
     </el-tab-pane>
+    <el-tab-pane label="el-table" vlaue="five">
+      <el-table border :data="dataFiveTable">
+          <el-table-column type="index" label="序号" width="55" />
+          <el-table-column label="名称" prop="label" />
+          <el-table-column label="详情" prop="value" show-overflow-tooltip> 
+           <template #default="scope">{{ scope.row.value }}</template>
+          </el-table-column>
+      </el-table>
+    </el-tab-pane>
   </el-tabs>
 </template >
 
@@ -98,6 +107,11 @@ const activeShree = ref(
   " web应用中，经常需要从不同的域请求资源，例如/加载第三方API数据/使用CDN来加速1资源加载"
 );
 const activeFont = ref("性能优化/跨平台兼容性/简化状态管理/提高开发效率");
+const dataFiveTable=ref([
+{ label:'stripe ',value:'带斑马纹'},
+{ label:'show-overflow-tooltip',value:'内容溢出(true/false)'}
+])
+
 </script>
 <style scoped>
 .custom-list {
