@@ -10,10 +10,6 @@
           @open="handleOpen"
           @close="handleClose"
         >
-          <el-menu-item index="0" :route="'/home'">
-            <el-icon><ElementPlus /></el-icon>
-            <span>首页</span>
-          </el-menu-item>
           <menutree :data="menu_data"></menutree>
         </el-menu>
       </el-col>
@@ -21,51 +17,54 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from "vue";
+<script setup>
+import { ref ,onMounted} from "vue";
 import menutree from "./menutree.vue";
+import {useDataStore} from '../store/store'
 
-export default defineComponent({
-  name: "Aside",
-  components: {
-    menutree,
+const store=useDataStore()
+const menu_data = ref([
+  {
+    id:'0',
+    name:'首页',
+    url:'/home'
   },
-  data() {
-    return {
-      menu_data: [
-        {
-          id: "1",
-          name: "VUE3",
-          children: [
-            {
-              id: "1-1",
-              name: "记忆1",
-              url: "/vue3_tabs",
-            },
-            {
-              id: "1-2",
-              name: "导出",
-              url: "/home?1-2",
-            },
-          ],
-        },
-        {
-          id: "2",
-          name: "表头",
-          url: "/home?2",
-        },
-      ],
-    };
+  {
+    id: "1",
+    name: "其他",
+    children: [
+      {
+        id: "1-1",
+        name: "知识点",
+        url: "/vue3_tabs",
+      },
+    ],
   },
-  methods: {
-    handleOpen(row) {
-      console.log(10, row);
-    },
-    handleClose(row) {
-      console.log(11, row);
-    },
+  {
+    id: "2",
+    name: "Css",
+    children: [
+      {
+        id: "2-1",
+        name: "样式布局1",
+        url: "/vue3_cssStyle",
+      },
+    ],
   },
-});
+]);
+
+
+const fetchData=async()=>{
+   store.increment(menu_data.value);
+}
+onMounted(fetchData)
+
+function handleOpen(row) {
+  console.log(10,);
+}
+function handleClose(row) {
+  console.log(11, row);
+}
 </script>
 
 <style scoped>

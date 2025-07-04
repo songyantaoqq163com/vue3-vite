@@ -12,6 +12,11 @@ const routes = [
         name:'vue3_tabs',
         component:()=>import('@/components/vue3/vue3_tabs.vue'),
         meta:{title:'vue3'}
+    },{
+        path:'/vue3_cssStyle',
+        name:'vue3_cssStyle',
+        component:()=>import('@/components/vue3/vue3_cssStyle.vue'),
+        meta:{title:'vue3_css1'}
     }
 ]
 const router = createRouter({

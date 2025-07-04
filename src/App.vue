@@ -1,5 +1,5 @@
 <script setup>
-// import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Framework/Header.vue'
 import Aside from "./components/Framework/Aside.vue";
 </script>
 
@@ -10,7 +10,9 @@ import Aside from "./components/Framework/Aside.vue";
         <Aside></Aside>
       </el-aside>
       <el-container>
-        <el-header></el-header>
+        <el-header>
+          <Header />
+        </el-header>
         <el-main>
           <router-view></router-view>
         </el-main>
@@ -37,8 +39,11 @@ body {
   border-bottom: 1px solid gray;
   background: #409eff;
   height: 40px!important;
+  line-height: 40px;
+  color: #fff;
 }
 .el-main {
   --el-main-padding: 10px!important;
+  background: #dcdfe6;
 }
 </style>
