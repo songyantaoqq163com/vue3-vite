@@ -52,6 +52,17 @@ const menu_data = ref([
       },
     ],
   },
+  {
+    id:"3",
+    name:"动画",
+    children:[
+      {
+        id:"3-1",
+        name:"轮播图",
+        url:"/animation/carousel"
+      }
+    ]
+  }
 ]);
 
 
@@ -73,7 +84,7 @@ function handleClose(row) {
   height: 40px;
   line-height: 40px;
   text-align: center;
-  background: #409eff;
+  background:linear-gradient(to right, #080808 0%, #59a7f5 100%);
   color: #fff;
 }
 .menu_left {

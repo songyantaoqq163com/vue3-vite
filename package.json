@@ -18,6 +18,7 @@
     "router": "^1.3.8",
     "vue": "^3.5.17",
     "vue-router": "^4.2.2",
+    "vue3-carousel-3d": "^1.0.4",
     "vxe-table": "^4.13.51"
   },
   "devDependencies": {

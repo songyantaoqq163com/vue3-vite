@@ -45,5 +45,7 @@ body {
 .el-main {
   --el-main-padding: 10px!important;
   background: #dcdfe6;
+    height: calc(100vh - 40px)!important;
+  overflow: scroll;
 }
 </style>

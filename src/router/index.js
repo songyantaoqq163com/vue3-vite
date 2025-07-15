@@ -17,6 +17,11 @@ const routes = [
         name:'vue3_cssStyle',
         component:()=>import('@/components/vue3/vue3_cssStyle.vue'),
         meta:{title:'vue3_css1'}
+    },{
+        path:'/animation/carousel',
+        name:'carousel',
+        component:()=>import('@/components/animation/carousel.vue'),
+        meta:{title:'轮播图'}
     }
 ]
 const router = createRouter({
