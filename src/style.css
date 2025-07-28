@@ -1,3 +1,10 @@
+/* .el-sub-menu__title:hover{
+  color: #409eff!important;
+  background: #ada6a6!important;
+}
+.el-menu-item{
+  color: #ffffff!important;
+} */
 .el-sub-menu__title{
   height: 35px !important;
   line-height: 35px !important;

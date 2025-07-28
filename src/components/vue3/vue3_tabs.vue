@@ -81,7 +81,7 @@
         </ol>
       </div>
     </el-tab-pane>
-    <el-tab-pane label="el-table" vlaue="five">
+    <el-tab-pane label="el-table" name="five">
       <el-table border :data="dataFiveTable">
           <el-table-column type="index" label="序号" width="55" />
           <el-table-column label="名称" prop="label" />
@@ -111,6 +111,10 @@ const dataFiveTable=ref([
 { label:'stripe ',value:'带斑马纹'},
 { label:'show-overflow-tooltip',value:'内容溢出(true/false)'}
 ])
+
+function handleClick(event){
+  console.log(116,event)
+}
 
 </script>
 <style scoped>

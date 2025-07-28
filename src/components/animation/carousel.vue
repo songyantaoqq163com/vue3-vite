@@ -13,7 +13,7 @@
         <el-descriptions-item label="属性5">controlsVisible/	Boolean	false	/是否显示左右箭头</el-descriptions-item>
      </el-descriptions>
 
-      <carousel-3d :autoplay="false" :clickable="true" :controlsVisible="true"
+      <carousel-3d  :autoplay="false" :clickable="true" :controlsVisible="true"
        :autoplay-timeout="3000" :perspective="45" :space="400">
             <slide v-for="(item, i) in lists" :key="i" :index="i">
             <img :src="item" alt="slide" style="height: 100%;" />

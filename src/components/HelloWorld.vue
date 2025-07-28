@@ -1,7 +1,9 @@
 <template>
+  <el-calendar v-model="Calendar" />
+
+
   <div class="carousel-3d-three">
     <button class="nav left"  @click="rotateLeft">&lt;</button>
-
     <!-- 舞台：永远只包含 3 张图 -->
     <div
       class="stage"
@@ -26,6 +28,8 @@ import { ref } from 'vue'
 import img from '@/assets/cvd.png'
 import img1 from '@/assets/pvd.png'
 import img2 from '@/assets/print.png'
+
+const Calendar = ref(new Date())
 
 /* 1. 三张图 */
 // const imgs = ref([

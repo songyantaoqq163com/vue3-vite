@@ -4,7 +4,7 @@
       <el-col :span="24">
         <div class="menu_top">菜单目录</div>
         <el-menu
-          default-active="1-1"
+          default-active="0"
           class="menu_left"
           unique-opened=true
           router
@@ -89,6 +89,7 @@ function handleClose(row) {
 }
 .menu_left {
   height: calc(100vh - 40px);
+  /* background: #080808; */
 }
 .el-menu-item {
   height: 35px !important;
