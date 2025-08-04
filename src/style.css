@@ -12,3 +12,15 @@
 ul li{
   list-style: none
 }
+.flex_bet{
+  display: flex!important;
+  justify-content: space-between!important;
+}
+.grid_align{
+  display: inline-block;
+  align-items: center;
+}
+
+.width100{
+  width: 100px!important;
+}

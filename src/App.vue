@@ -1,6 +1,17 @@
 <script setup>
 import Header from './components/Framework/Header.vue'
 import Aside from "./components/Framework/Aside.vue";
+import {computed} from 'vue'
+
+import { useI18n } from 'vue-i18n'
+import zhLocale from 'element-plus/es/locale/lang/zh-cn'
+import enLocale from 'element-plus/es/locale/lang/en'
+
+const { locale } = useI18n()
+
+const elementLocale = computed(() =>
+  locale.value === 'en-US' ? enLocale : zhLocale
+)
 </script>
 
 <template>
@@ -14,7 +25,10 @@ import Aside from "./components/Framework/Aside.vue";
           <Header />
         </el-header>
         <el-main>
-          <router-view></router-view>
+          <!-- <router-view></router-view> -->
+            <el-config-provider :locale="elementLocale">
+              <router-view />
+            </el-config-provider>
         </el-main>
       </el-container>
     </el-container>

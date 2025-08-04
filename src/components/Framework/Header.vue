@@ -1,19 +1,38 @@
 <template>
+  <div class="flex_bet">
   <el-breadcrumb separator="/">
     <el-breadcrumb-item v-for="item in breadcrumbList" :key="item.index">
       {{ item.name }}
     </el-breadcrumb-item>
   </el-breadcrumb>
+
+<div class="grid_align">
+   <span>{{ $t('headers.user') }}</span>
+ <el-select v-model="language" class="width100" @change="languageChange" >
+    <el-option v-for='item in languageList' :key="item.index"
+      :label="item.label" :value="item.value"></el-option>
+  </el-select>
+</div>
+ 
+</div>
 </template>
   <script setup>
 import { ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useDataStore } from "../store/store";
+import { useI18n } from 'vue-i18n'
+const { locale } = useI18n()
+
 
 const store = useDataStore();
 const route = useRoute();
 const router = useRouter();
 const breadcrumbList = ref([]);
+const language=ref('zh-CN')
+const languageList=ref([
+  {label:'中文',value:'zh-CN'},
+  {label:'English',value:'en-US'}
+])
 
 function Breadcrumb(data, name, list) {
   let result = null;
@@ -30,6 +49,11 @@ function Breadcrumb(data, name, list) {
     }
   }
   return result;
+}
+
+function languageChange(e){
+  locale.value=e
+  localStorage.setItem('lang',e)
 }
 
 watch(route, (newRoute, oldRoute) => {
