@@ -1,10 +1,4 @@
-/* .el-sub-menu__title:hover{
-  color: #409eff!important;
-  background: #ada6a6!important;
-}
-.el-menu-item{
-  color: #ffffff!important;
-} */
+
 .el-sub-menu__title{
   height: 35px !important;
   line-height: 35px !important;
@@ -23,4 +17,7 @@ ul li{
 
 .width100{
   width: 100px!important;
+}
+.margin010{
+  margin: 0 10px;
 }

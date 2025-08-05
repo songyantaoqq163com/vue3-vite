@@ -7,7 +7,11 @@
   </el-breadcrumb>
 
 <div class="grid_align">
-   <span>{{ $t('headers.user') }}</span>
+  
+  <span> 
+    <el-icon class="helpTips" style="color:red;"><BellFilled /></el-icon>
+  </span>
+  <span class="margin010">{{ $t('headers.user') }}</span>
  <el-select v-model="language" class="width100" @change="languageChange" >
     <el-option v-for='item in languageList' :key="item.index"
       :label="item.label" :value="item.value"></el-option>
@@ -81,4 +85,62 @@ watch(
 .el-breadcrumb .el-breadcrumb__separator {
   color: #fff !important;
 }
+
+
+.helpTips{
+  animation-name: upAnimation;
+    transform-origin: center top;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-delay: .5s;
+}
+@keyframes upAnimation
+{
+    0% {
+        transform: rotate(0deg);
+        transition-timing-function: cubic-bezier(0.215,.61,.355,1);
+    }
+    10% {
+        transform: rotate(-12deg);
+        transition-timing-function: cubic-bezier(0.215,.61,.355,1);
+    }
+    20% {
+        transform: rotate(12deg);
+        transition-timing-function: cubic-bezier(0.215,.61,.355,1);
+    }
+    28% {
+        transform: rotate(-10deg);
+        transition-timing-function: cubic-bezier(0.215,.61,.355,1);
+    }
+    36% {
+        transform: rotate(10deg);
+        transition-timing-function: cubic-bezier(0.755,.5,.855,.06);
+    }
+    42% {
+        transform: rotate(-8deg);
+        transition-timing-function: cubic-bezier(0.755,.5,.855,.06);
+    }
+    48% {
+        transform: rotate(8deg);
+        transition-timing-function: cubic-bezier(0.755,.5,.855,.06);
+    }
+    52% {
+        transform: rotate(-4deg);
+        transition-timing-function: cubic-bezier(0.755,.5,.855,.06);
+    }
+    56% {
+        transform: rotate(4deg);
+        transition-timing-function: cubic-bezier(0.755,.5,.855,.06);
+    }
+    60% {
+        transform: rotate(0deg);
+        transition-timing-function: cubic-bezier(0.755,.5,.855,.06);
+    }
+    100% {
+        transform: rotate(0deg);
+        transition-timing-function: cubic-bezier(0.215,.61,.355,1);
+    }
+}
+
 </style>
