@@ -1,5 +1,8 @@
 <template>
   <!-- <el-calendar v-model="Calendar" /> -->
+  <span>
+    项目搭建 npm create vite@latest
+  </span>
   <el-divider content-position="left" style="border-top: 1px red solid">
     二十四节气插件、npm install lunar-typescript
   </el-divider>

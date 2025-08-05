@@ -2,7 +2,7 @@
   <div>
     <el-row>
       <el-col :span="24">
-        <div class="menu_top">菜单目录</div>
+        <div class="menu_top">{{$t('asides.asideName')}}</div>
         <el-menu
           default-active="0"
           class="menu_left"
@@ -19,20 +19,24 @@
 </template>
 
 <script setup>
-import { ref ,onMounted} from "vue";
+import { ref ,onMounted,getCurrentInstance} from "vue";
 import menutree from "./menutree.vue";
 import {useDataStore} from '../store/store'
+import { useI18n } from 'vue-i18n'
+import { computed } from 'vue'
 
+const {Proxy}=getCurrentInstance()
 const store=useDataStore()
-const menu_data = ref([
+const { t } = useI18n()
+const menu_data =  computed(()=>[
   {
     id:'0',
-    name:'首页',
+    name:t('asides.asideIndex'),
     url:'/home'
   },
   {
     id: "1",
-    name: "其他",
+    name: t('asides.asideElse'),
     children: [
       {
         id: "1-1",
@@ -54,7 +58,7 @@ const menu_data = ref([
   },
   {
     id:"3",
-    name:"动画",
+    name: t('asides.asideCartoon'),
     children:[
       {
         id:"3-1",
