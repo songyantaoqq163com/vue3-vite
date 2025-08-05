@@ -21,7 +21,7 @@
 </div>
 </template>
   <script setup>
-import { ref, watch } from "vue";
+import { computed, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
 import { useDataStore } from "../store/store";
 import { useI18n } from 'vue-i18n'
@@ -37,6 +37,11 @@ const languageList=ref([
   {label:'中文',value:'zh-CN'},
   {label:'English',value:'en-US'}
 ])
+if(localStorage.getItem('lang')){
+  language.value=localStorage.getItem('lang')
+}
+
+
 
 function Breadcrumb(data, name, list) {
   let result = null;
@@ -64,6 +69,7 @@ watch(route, (newRoute, oldRoute) => {
   console.log("面包屑1", newRoute, store.dataArray);
   let Data = Breadcrumb(store.dataArray, newRoute.path, []);
   breadcrumbList.value = Data;
+  
 });
 watch(
   () => store.dataArray,

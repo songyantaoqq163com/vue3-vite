@@ -1,7 +1,7 @@
 <script setup>
 import Header from './components/Framework/Header.vue'
 import Aside from "./components/Framework/Aside.vue";
-import {computed} from 'vue'
+import {computed,watch} from 'vue'
 
 import { useI18n } from 'vue-i18n'
 import zhLocale from 'element-plus/es/locale/lang/zh-cn'
@@ -12,10 +12,19 @@ const { locale } = useI18n()
 const elementLocale = computed(() =>
   locale.value === 'en-US' ? enLocale : zhLocale
 )
+
+
+watch(locale, (newLang) => {
+  // 可选：保存到 localStorage
+  localStorage.setItem('lang', newLang)
+  // 刷新页面
+  location.reload()
+})
 </script>
 
 <template>
   <div class="common-layout">
+    <el-config-provider :locale="elementLocale">
     <el-container>
       <el-aside width="200px">
         <Aside></Aside>
@@ -25,15 +34,15 @@ const elementLocale = computed(() =>
           <Header />
         </el-header>
         <el-main>
-          <!-- <router-view></router-view> -->
-            <el-config-provider :locale="elementLocale">
+          <router-view></router-view>
+            <!-- <el-config-provider :locale="elementLocale">
               <router-view />
-            </el-config-provider>
+            </el-config-provider> -->
         </el-main>
       </el-container>
     </el-container>
+    </el-config-provider>
   </div>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
 </template>
 
 <style>
