@@ -1,4 +1,5 @@
 <template>
+
   <div class="vis">
     <img src="../../assets/vue.svg" />
     <div class="div1">
@@ -17,7 +18,9 @@
     </div>
   </div>
 </template>
-  <script>
+  <script setup>
+  import {ref, onMounted,onBeforeUnmount} from 'vue'
+
 </script>
   <style scoped>
 .vis {

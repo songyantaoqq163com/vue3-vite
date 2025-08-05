@@ -64,6 +64,10 @@ const menu_data =  computed(()=>[
         id:"3-1",
         name:"轮播图",
         url:"/animation/carousel"
+      },{
+        id:"3-2",
+        name:'Vanta.js',
+        url:"/animation/vanta"
       }
     ]
   }
