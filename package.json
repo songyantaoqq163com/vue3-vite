@@ -12,6 +12,7 @@
     "@element-plus/icons-vue": "^2.1.0",
     "@vue/runtime-core": "^3.5.17",
     "element-plus": "^2.3.6",
+    "lunar-typescript": "^1.8.0",
     "path": "^0.12.7",
     "pinia": "^3.0.3",
     "pinia-plugin-persistedstate": "^4.4.1",
