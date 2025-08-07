@@ -28,6 +28,11 @@ const routes = [
         name:'vanta',
         component:()=>import('@/components/animation/vanta.vue'),
         meta:{title:'vanta背景'}
+    },{
+        path:'/js/stochastic',
+        name:'stochastic',
+        component:()=>import('@/components/comJs/stochastic.vue'),
+        meta:{title:'stochastic随机生成'}
     }
 ]
 const router = createRouter({

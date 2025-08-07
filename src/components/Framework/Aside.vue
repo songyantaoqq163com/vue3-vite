@@ -70,6 +70,16 @@ const menu_data =  computed(()=>[
         url:"/animation/vanta"
       }
     ]
+  },{
+    id:'4',
+    name:'Js',
+    children:[
+      {
+        id:'4-1',
+        name:'随机生成',
+        url:'/js/stochastic'
+      }
+    ]
   }
 ]);
 

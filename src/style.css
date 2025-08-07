@@ -21,3 +21,8 @@ ul li{
 .margin010{
   margin: 0 10px;
 }
+
+.block_center{
+  display: inline-block;
+  text-align: center;
+}

@@ -13,13 +13,6 @@ const elementLocale = computed(() =>
   locale.value === 'en-US' ? enLocale : zhLocale
 )
 
-
-watch(locale, (newLang) => {
-  // 可选：保存到 localStorage
-  localStorage.setItem('lang', newLang)
-  // 刷新页面
-  location.reload()
-})
 </script>
 
 <template>
