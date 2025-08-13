@@ -1,5 +1,5 @@
 <template>
-  <p>随机生成红-黄-绿色60中颜色</p>
+  <p>随机生成(红-黄-绿)60中颜色</p>
   <span
     v-for="(item, index) in colorsData1"
     :key="index"
@@ -11,12 +11,17 @@
     <!-- <el-color-picker :model-value="item" show-alpha size="small" /> -->
   </span>
   <p>随机生成60个数字不重复<el-button @click="clickNum">刷新</el-button></p>
+  <ol>
+    <li v-for="item in colorNum1Data" :key="item.index">
+      {{ item }}
+    </li>
+  </ol>
   <div
     v-for="(item, index) in colorNum1"
     :key="index"
     class="block_center"
     style="border: 1px solid gray; width: 120px"
-    :style="'background:' + generate(item)"
+    :style="'background:' + formatgenerate(item)"
   >
     随机数字{{ item }}
   </div>
@@ -24,14 +29,18 @@
   <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import colorJson from "../Json/colorJson.json";
-import { compare } from "../../js/common1.js";
+import { compare, generateUniqueNumbers, spArray } from "../../js/common1.js";
 const colorsData1 = ref([]);
 // const colorsData2 = ref(colorJson.colorData1);
 const colorNum1 = ref([]);
+const colorNum1Data = ref([]);
 
 onMounted(() => {
   colorsData1.value = ColorData(60);
+
   colorNum1.value = generateUniqueNumbers();
+
+  colorNum1Data.value = spArray(20, colorNum1.value);
 });
 //随机颜色
 function ColorData(num) {
@@ -59,26 +68,19 @@ function hexToRgba(hex, alpha = 255) {
   const b = parseInt(hex.slice(5, 7), 16);
   return `rgba(${r}, ${g}, ${b}, ${alpha / 255})`;
 }
-//随机数字及方法
+//刷新随机数字数组
 function clickNum() {
   colorNum1.value = generateUniqueNumbers();
-  console.log('随机数组',colorNum1.value)
+
+  colorNum1Data.value = spArray(20, colorNum1.value);
+  console.log("随机数组-排序", colorNum1.value);
 }
-function generate(e) {
+
+function formatgenerate(e) {
   let dataA = compare([...colorNum1.value]);
   let B = dataA.indexOf(e);
   if (B !== -1) {
     return colorsData1.value[B];
   }
-}
-function generateUniqueNumbers(count = 60, min = 0, max = 100) {
-  if (max - min + 1 < count) {
-    throw new Error("范围太小，无法生成指定数量的不重复数字");
-  }
-  const nums = new Set();
-  while (nums.size < count) {
-    nums.add(Math.floor(Math.random() * (max - min + 1)) + min);
-  }
-  return [...nums];
 }
 </script>
