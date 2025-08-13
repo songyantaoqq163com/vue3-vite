@@ -4,12 +4,11 @@
       <el-col :span="24">
         <div class="menu_top">{{$t('asides.asideName')}}</div>
         <el-menu
-          default-active="0"
+          :default-active=defaultValue
           class="menu_left"
           unique-opened=true
           router
-          @open="handleOpen"
-          @close="handleClose"
+          @select="handleSelect"
         >
           <menutree :data="menu_data"></menutree>
         </el-menu>
@@ -82,19 +81,20 @@ const menu_data =  computed(()=>[
     ]
   }
 ]);
-
+const defaultValue=ref('0')
 
 const fetchData=async()=>{
    store.increment(menu_data.value);
 }
 onMounted(fetchData)
 
-function handleOpen(row) {
-  console.log(10,);
+const fullValue=computed(()=>{return sessionStorage.getItem('menu_index')})
+defaultValue.value=fullValue.value
+
+function handleSelect(row){
+  sessionStorage.setItem('menu_index',row)
 }
-function handleClose(row) {
-  console.log(11, row);
-}
+
 </script>
 
 <style scoped>

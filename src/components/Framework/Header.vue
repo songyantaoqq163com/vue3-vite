@@ -63,7 +63,7 @@ function Breadcrumb(data, name, list) {
 function languageChange(e){
   locale.value=e
   localStorage.setItem('lang',e)
-  location.reload()
+  // location.reload()
 }
 
 watch(route, (newRoute, oldRoute) => {
