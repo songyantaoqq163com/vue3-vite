@@ -79,6 +79,16 @@ const menu_data =  computed(()=>[
         url:'/js/stochastic'
       }
     ]
+  },{
+    id:'5',
+    name:t('asides.asideEcharts'),
+    children:[
+      {
+        id:'5-1',
+        name:'echarts',
+        url:'/an/echarts'
+      }
+    ]
   }
 ]);
 const defaultValue=ref('0')

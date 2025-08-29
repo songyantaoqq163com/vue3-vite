@@ -6,6 +6,7 @@ export default {
         asideName: '菜单目录',
         asideIndex: '首页',
         asideElse: '其他',
-        asideCartoon: '动画'
+        asideCartoon: '动画',
+        asideEcharts:'插件'
     }
 }

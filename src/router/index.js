@@ -33,6 +33,11 @@ const routes = [
         name:'stochastic',
         component:()=>import('@/components/comJs/stochastic.vue'),
         meta:{title:'stochastic随机生成'}
+    },{
+        path:'/an/echarts',
+        name:'echarts',
+        component:()=>import('@/components/plugins/echarts.vue'),
+        meta:{title:'echarts绘图'}
     }
 ]
 const router = createRouter({

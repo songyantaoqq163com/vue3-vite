@@ -15,12 +15,15 @@ import { Carousel3d } from 'vue3-carousel-3d'
 import "vue3-carousel-3d/dist/index.css"
 import i18n from './i18n'
 
+import {VueEcharts} from 'vue3-echarts'
+
 
 const pinia=createPinia()
 const app = createApp(App)
 app.use(Carousel3d)
 app.use(pinia)
 app.use(i18n)
+app.component('v-chart', VueEcharts)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
     app.component(key, component)
 }

@@ -6,6 +6,7 @@ export default {
         asideName: 'Menu List',
         asideIndex: 'Index',
         asideElse: 'Else',
-        asideCartoon: 'cartoon'
+        asideCartoon: 'cartoon',
+        asideEcharts:'Plugins'
     }
 }
