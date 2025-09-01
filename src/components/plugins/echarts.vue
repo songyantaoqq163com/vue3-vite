@@ -5,7 +5,7 @@
   <script setup>
 import { ref, onMounted } from "vue";
 
-const arr = ref([1745, 87.8, 118.24, 3000, 1200]);
+const arr = ref([1765.45, 87.8, 173.11, 1281.58, 421.56]);
 const loading = ref(false);
 const option = ref({});
 const total = ref("");
