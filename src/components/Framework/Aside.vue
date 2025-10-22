@@ -57,7 +57,7 @@ const menu_data =  computed(()=>[
         id: "2-1",
         name: "样式布局1",
         url: "/vue3_cssStyle",
-      },
+      }
     ],
   },
   {
@@ -72,6 +72,10 @@ const menu_data =  computed(()=>[
         id:"3-2",
         name:'Vanta.js',
         url:"/animation/vanta"
+      },{
+        id:'3-3',
+        name:"hover效果",
+        url:'/animation/hoverResult'
       }
     ]
   },{

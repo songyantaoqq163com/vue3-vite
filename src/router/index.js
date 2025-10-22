@@ -29,10 +29,15 @@ const routes = [
         component:()=>import('@/components/animation/carousel.vue'),
         meta:{title:'轮播图'}
     },{
-         path:'/animation/vanta',
+        path:'/animation/vanta',
         name:'vanta',
         component:()=>import('@/components/animation/vanta.vue'),
         meta:{title:'vanta背景'}
+    },{
+        path:'/animation/hoverResult',
+        name:'hoverResult',
+        component:()=>import('@/components/animation/hoverResult.vue'),
+        meta:{title:'hover效果'}
     },{
         path:'/js/stochastic',
         name:'stochastic',
