@@ -40,8 +40,13 @@ const menu_data =  computed(()=>[
       {
         id: "1-1",
         name: "知识点",
-        url: "/vue3_tabs",
+        url: "/rests_tabs",
       },
+      {
+        id:'1-2',
+        name:'el-table',
+        url:'/rests_table'
+      }
     ],
   },
   {

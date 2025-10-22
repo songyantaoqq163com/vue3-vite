@@ -9,10 +9,15 @@ const routes = [
         component: () => import('../components/HelloWorld.vue'),
         meta: {title: '首页'}
     },{
-        path:'/vue3_tabs',
-        name:'vue3_tabs',
-        component:()=>import('@/components/vue3/vue3_tabs.vue'),
-        meta:{title:'vue3'}
+        path:'/rests_tabs',
+        name:'rests_tabs',
+        component:()=>import('@/components/rests/rests_tabs.vue'),
+        meta:{title:'rests_tabs'}
+    },{
+        path:'/rests_table',
+        name:'rests_table',
+        component:()=>import('@/components/rests/rests_table.vue'),
+        meta:{title:'rests_table'}
     },{
         path:'/vue3_cssStyle',
         name:'vue3_cssStyle',

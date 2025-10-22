@@ -1,0 +1,84 @@
+{
+    "table_restsData": [
+        {
+            "key": "dateRange",
+            "label": "时间范围",
+            "type": "daterange",
+            "default": [
+                "2025-10-01",
+                "2025-10-21"
+            ]
+        },
+        {
+            "key": "productLine",
+            "label": "单选",
+            "type": "radio",
+            "options": [
+                {
+                    "label": "全部",
+                    "value": ""
+                },
+                {
+                    "label": "A",
+                    "value": "A"
+                },
+                {
+                    "label": "B",
+                    "value": "B"
+                }
+            ],
+            "default": ""
+        },
+        {
+            "key": "status",
+            "label": "状态多选",
+            "type": "checkbox",
+            "options": [
+                {
+                    "label": "运行",
+                    "value": "RUN"
+                },
+                {
+                    "label": "待机",
+                    "value": "IDLE"
+                },
+                {
+                    "label": "故障",
+                    "value": "DOWN"
+                }
+            ],
+            "default": [
+                "RUN",
+                "IDLE"
+            ]
+        },
+        {
+            "key": "batchNo",
+            "label": "批次号",
+            "type": "input",
+            "placeholder": "模糊搜索",
+            "default": ""
+        },
+        {
+            "key":"lineNos",
+            "label":"下拉框",
+            "type":"select",
+            "placeholder":"请选择",
+            "default":"0",
+            "options": [
+            {
+                "label": "全部",
+                "value": "0"
+            },
+            {
+                "label": "1线",
+                "value": "1"
+            },
+            {
+                "label": "2线",
+                "value": "2"
+            }
+        ]
+        }
+    ]
+}
