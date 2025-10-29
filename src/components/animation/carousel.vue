@@ -45,8 +45,8 @@
    import {ref} from 'vue'
 
    import img from '@/assets/cvd.png'
-    import img1 from '@/assets/pvd.png'
-    import img2 from '@/assets/print.png'
+   import img1 from '@/assets/pvd.png'
+  import img2 from '@/assets/print.png'
    let lists=[img,img1,img2]
 
 // 轮播1
