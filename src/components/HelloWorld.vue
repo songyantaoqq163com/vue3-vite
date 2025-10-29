@@ -14,30 +14,13 @@
       </div>
     </template>
   </el-calendar>
-
-  <div class="carousel-3d-three">
-    <button class="nav left" @click="rotateLeft">&lt;</button>
-    <!-- 舞台：永远只包含 3 张图 -->
-    <div class="stage" :style="{ transform: `rotateY(${rotateY}deg)` }">
-      <figure
-        v-for="(img, i) in imgs"
-        :key="i"
-        class="slide"
-        :style="slideStyle(i)"
-      >
-        <img :src="img" />
-      </figure>
-    </div>
-
-    <button class="nav right" @click="rotateRight">&gt;</button>
-  </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import img from "@/assets/cvd.png";
-import img1 from "@/assets/pvd.png";
-import img2 from "@/assets/print.png";
+// import img from "@/assets/cvd.png";
+// import img1 from "@/assets/pvd.png";
+// import img2 from "@/assets/print.png";
 import { Solar ,Lunar, HolidayUtil} from "lunar-typescript";
 
 const Calendar = ref(new Date());
@@ -52,28 +35,6 @@ const getSolarTerm = (dateStr) => {
 };
 
 
-
-
-/* 1. 三张图 */
-// const imgs = ref([
-//   'https://picsum.photos/id/1015/600/360',
-//   'https://picsum.photos/id/1016/600/360',
-//   'https://picsum.photos/id/1018/600/360'
-// ])
-const imgs = ref([img, img1, img2]);
-
-/* 2. 舞台当前旋转角度（初始 0°） */
-const rotateY = ref(0);
-const step = 120; // 360 / 3 = 120°
-
-/* 3. 计算单张卡片位置（固定，不随索引变） */
-const slideStyle = (i) => ({
-  transform: `rotateY(${i * step}deg) translateZ(260px)`,
-});
-
-/* 4. 左右旋转舞台（带动 3 张图一起动） */
-const rotateLeft = () => (rotateY.value -= step);
-const rotateRight = () => (rotateY.value += step);
 </script>
 
 <style scoped>
