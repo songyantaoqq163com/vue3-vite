@@ -42,12 +42,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.el-menu-item {
-  height: 35px!important;
-  line-height: 35px!important;
-}
-.el-sub-menu__title {
-  height: 35px !important;
-  line-height: 35px !important;
-}
+ 
 </style>

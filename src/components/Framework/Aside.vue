@@ -73,9 +73,13 @@ const menu_data =  computed(()=>[
         name:'Vanta.js',
         url:"/animation/vanta"
       },{
-        id:'3-3',
+        id:'3-2',
         name:"hover效果",
         url:'/animation/hoverResult'
+      },{
+        id:'3-3',
+        name:"拖拽Tabs",
+        url:"/animation/dragTabs"
       }
     ]
   },{
@@ -127,13 +131,5 @@ function handleSelect(row){
 .menu_left {
   height: calc(100vh - 40px);
   /* background: #080808; */
-}
-.el-menu-item {
-  height: 35px !important;
-  line-height: 35px !important;
-}
-.el-sub-menu__title {
-  height: 35px !important;
-  line-height: 35px !important;
 }
 </style>

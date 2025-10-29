@@ -1,7 +1,11 @@
 
 .el-sub-menu__title{
-  height: 35px !important;
-  line-height: 35px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+}
+.el-menu-item {
+  height: 40px !important;
+  line-height: 40px !important;
 }
 ul li{
   list-style: none

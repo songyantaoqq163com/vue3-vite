@@ -39,6 +39,11 @@ const routes = [
         component:()=>import('@/components/animation/hoverResult.vue'),
         meta:{title:'hover效果'}
     },{
+        path:'/animation/dragTabs',
+        name:'dragTabs',
+        component:()=>import('@/components/animation/dragTabs.vue'),
+        meta:{title:'拖拽Tabs'}
+    },{
         path:'/js/stochastic',
         name:'stochastic',
         component:()=>import('@/components/comJs/stochastic.vue'),
