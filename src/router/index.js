@@ -53,6 +53,11 @@ const routes = [
         name:'echarts',
         component:()=>import('@/components/plugins/echarts.vue'),
         meta:{title:'echarts绘图'}
+    },{
+        path:'/fun/export',
+        name:'export',
+        component:()=>import('@/components/function/export.vue'),
+        meta:{title:'导入导出'}
     }
 ]
 const router = createRouter({

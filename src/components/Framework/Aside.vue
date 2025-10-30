@@ -102,6 +102,16 @@ const menu_data =  computed(()=>[
         url:'/an/echarts'
       }
     ]
+  },{
+    id:'6',
+    name:'功能',
+    children:[
+      {
+        id:'6-1',
+        name:'导入导出',
+        url:'/fun/export'
+      }
+    ]
   }
 ]);
 const defaultValue=ref('0')

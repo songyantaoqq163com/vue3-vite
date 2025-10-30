@@ -13,6 +13,7 @@
     "@vue/runtime-core": "^3.5.17",
     "echarts": "^6.0.0",
     "element-plus": "^2.3.6",
+    "file-saver": "^2.0.5",
     "lunar-typescript": "^1.8.0",
     "path": "^0.12.7",
     "pinia": "^3.0.3",
@@ -25,7 +26,8 @@
     "vue-router": "^4.2.2",
     "vue3-carousel-3d": "^1.0.4",
     "vue3-echarts": "^1.1.0",
-    "vxe-table": "^4.13.51"
+    "vxe-table": "^4.13.51",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.6.2",
