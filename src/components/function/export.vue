@@ -13,7 +13,7 @@
 </template>
   <script setup>
 import { ref } from "vue";
-import { exportTableToExcel } from "../../js/exportExcel";
+import { exportElTable } from "../../js/exportExcel.js";
 
 const myTable = ref(null);
 
@@ -21,8 +21,12 @@ const tableData = ref([
   { name: "张三", age: 28 },
   { name: "李四", age: 32 },
 ]);
+const columns=[
+    {label:'姓名',prop:'name'},
+    {label:'年龄',prop:'age'},
+  ]
 
 const handleExport = () => {
-  exportTableToExcel(myTable.value, "用户列表.xlsx");
+  exportElTable(tableData.value,columns, "用户列表.xlsx");
 };
 </script>

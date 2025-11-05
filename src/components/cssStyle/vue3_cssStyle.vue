@@ -16,6 +16,14 @@
       </ul>
     </div>
   </div>
+
+  <div calss="vis2">
+    <ul class="vis2_ul">
+      <li>序号</li>
+      <li>列名</li>
+      <li>详情</li>
+    </ul>
+  </div>
 </template>
   <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
@@ -45,5 +53,20 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 .first_li2_div1 {
   width: 200px;
   display: inline-block;
+}
+
+
+
+
+.vis2_ul{
+  display: flex;
+   text-align: center;
+   border: 2px solid #000000;
+  justify-content: space-around;
+}
+.vis2_ul li{
+  text-align: center;
+  width: 100%;
+  border-left: 2px solid #000000;
 }
 </style>

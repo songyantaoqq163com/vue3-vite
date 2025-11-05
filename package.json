@@ -27,7 +27,7 @@
     "vue3-carousel-3d": "^1.0.4",
     "vue3-echarts": "^1.1.0",
     "vxe-table": "^4.13.51",
-    "xlsx": "^0.18.5"
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.6.2",
